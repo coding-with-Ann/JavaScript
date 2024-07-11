@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bread House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <!-- since the address is in id form used # -->
+            <a href="#cakes">cakes</a>
+            <a href="#cheese-cakes">cheesecakes</a>
+            <a href="#new-arrivals">new arrivals</a>
+            <a href="#about">about</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="cart-icon"><i class="fa-solid fa-cart-arrow-down"></i></div>
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+
+        <div class="search-form">
+            <input type="search" name="search" id="search-box" placeholder="search here...">
+            <!-- type is search -->
+            <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+        </div>
+
+        <div class="cart-items-container">
+            <!-- first item -->
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./images/brownes.jpg" alt="">
+                <div class="content"><h3>yummy brownie</h3>
+                    <div class="price">$11.99/-</div>
+                </div>
+            </div>
+
+            <!-- second item -->
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./images/cakes/cake1.jpg" alt="">
+                <div class="content"><h3>chocolate cake</h3>
+                    <div class="price">$44.99/-</div>
+                </div>
+            </div>
+
+            <!-- third item -->
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./images/cheesecake/cheesecake2.jpg" alt="">
+                <div class="content"><h3>lemon cheesecake</h3>
+                    <div class="price">$20.19/-</div>
+                </div>
+            </div>
+
+            <!-- fourth item -->
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./images/macroons1.jpg" alt="">
+                <div class="content"><h3>rainbow cookies</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <a href="" class="btn">order now</a>
+        </div>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="hero">
+            <h3>indulge in heavenly sweet delights</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
+            <a class="btn" href="">get yours now</a>
+        </div>
+        <!-- body now contains two children,first one is header next
+        one is section with class name home. basically header and
+        section are siblings. Normally section should come 
+        after header section but we gave header section position
+        fixed, so we took the header from flow of elements from
+        the body, now for this body home section is the first child
+        because header has been given a different stage and on that
+        stage header is the first child but for the normal stage
+        where these body elements reside this home is the first element
+        and since body as well starts from the top left corner of the browser
+        right where the browser starts, home being the very first element
+        in the body, so it is also aiming for that position. now 
+        that has created problem because we have already reserved 
+        that space for the header section but since that space has 
+        been reserved through a different stage or through a diff flow
+        so now this home section is not aware of that so now we have
+        a problem so we have to come up with a solution, there are many
+        solution but in this we will find how much height is being occupied
+        by this header section, we will give that value as top margin 
+        for the home section -->
+    </section>
+
+    <section class="cakes" id="cakes">
+        <h3 class="title">our <span>cakes</span></h3>
+        <div class="wrapper">
+            <!-- item 1 -->
+            <div class="cake-card">
+                <img src="images/cakes/cake1.jpg" alt="">
+                <h3>chocolate cake</h3>
+                <div class="price">$22.99/-</div>
+                <a href="" class="btn">add to cart</a>
+            </div>
+
+            <!-- item 2 -->
+            <div class="cake-card">
+                <img src="images/cakes/cake2.jpg" alt="">
+                <h3>ice cake</h3>
+                <div class="price">$10.99/- <span>$15.99</span></div>
+                <a href="" class="btn">add to cart</a>
+            </div>
+
+            <!-- item 3 -->
+            <div class="cake-card">
+                <img src="images/cakes/cake3.jpg" alt="">
+                <h3>wedding cake</h3>
+                <div class="price">$149.99/- <span>$200</span></div>
+                <a href="" class="btn">add to cart</a>
+            </div>
+
+            <!-- item 4 -->
+            <div class="cake-card">
+                <img src="images/cakes/cake4.jpg" alt="">
+                <h3>waffle cake</h3>
+                <div class="price">$22.99/-</div>
+                <a href="" class="btn">add to cart</a>
+            </div>
+
+            <!-- item 5 -->
+            <div class="cake-card">
+                <img src="images/cakes/cake5.jpg" alt="">
+                <h3>rasp berry cake</h3>
+                <div class="price">$22.99/-</div>
+                <a href="" class="btn">add to cart</a>
+            </div>
+
+            <!-- item 6 -->
+            <div class="cake-card">
+                <img src="images/cakes/cake6.jpg" alt="">
+                <h3>lemon cake</h3>
+                <div class="price">$22.99/-</div>
+                <a href="" class="btn">add to cart</a>
+            </div>
+        </div>
+    </section>
+    <section class="cheese-cakes" id="cheese-cakes">
+        <h1 class="title">our <span>cheese cakes</span></h1>
+        <div class="wrapper">
+            <div class="cheese-card">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart"></a>
+                    <a class="fas fa-heart"></a>
+                    <a class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/cheesecake/cheesecake2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>mango cheese cake</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$15.99/- <span>20.99</span></div>
+                </div>
+            </div>
+
+            <!-- cheese-cake 2 -->
+
+            <div class="cheese-card">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart"></a>
+                    <a class="fas fa-heart"></a>
+                    <a class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/cheesecake/cheesecake3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>baked cheese cake</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$15.99/- <span>20.99</span></div>
+                </div>
+            </div>
+
+            <!-- cheese-cake 3 -->
+
+            <div class="cheese-card">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart"></a>
+                    <a class="fas fa-heart"></a>
+                    <a class="fas fa-eye"></a>
+                </div>
+                <div class="img">
+                    <img src="images/cheesecake/cheesecake4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>fruity summer cheese cake</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$15.99/- <span>20.99</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="new-arrivals" id="new-arrivals">
+        <h1 class="title">new <span>arrivals</span></h1>
+        <div class="wrapper">
+            <div class="card">
+                <div class="img">
+                    <img src="images/macroons1.jpg">
+                </div>
+                <div class="content">
+                    <a>rainbow macroons</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a class="btn">explore</a>
+                </div>
+            </div>
+
+            <!-- new arrival 2 -->
+
+            <div class="card">
+                <div class="img">
+                    <img src="images/cookies1.jpg">
+                </div>
+                <div class="content">
+                    <a>crunchy cookies</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a class="btn">explore</a>
+                </div>
+            </div>
+
+            <!-- new arrival 3 -->
+
+            <div class="card">
+                <div class="img">
+                    <img src="images/brownes.jpg">
+                </div>
+                <div class="content">
+                    <a>mouthwatering brownies</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a class="btn">explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="title"><span>about</span>us</h1>
+        <div class="container">
+            <div class="img">
+                <img src="images/cheesecake/cheesecake1.jpg">
+            </div>
+            <div class="content">
+                <h3>what makes us different?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aspernatur et perspiciatis nisi, explicabo ratione asperiores corporis porro voluptates laboriosam?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam perferendis ex molestias!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus porro veritatis illum suscipit quidem laudantium perferendis reiciendis eos aspernatur quam!</p>
+                <a class="btn">learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- review section begins -->
+
+    <section class="review" id="review">
+        <h1 class="title">customer's <span>review</span></h1>
+        <div class="wrapper">
+            <div class="review-card">
+                <img src="images/quote.png">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus omnis quasi illum aliquid laudantium magni repellendus. Ipsum dolore minima earum.</p>
+                <img class="customer" src="images/woman1.jpg">
+                <h3>sarah O'conner</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+
+            </div>
+
+            <!-- review card 2 -->
+            <div class="review-card">
+                <img src="images/quote.png">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus omnis quasi illum aliquid laudantium magni repellendus. Ipsum dolore minima earum.</p>
+                <img class="customer" src="images/woman2.jpg">
+                <h3>pepper potts</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+
+            </div>
+
+            <!-- review card 3 -->
+
+            <div class="review-card">
+                <img src="images/quote.png">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus omnis quasi illum aliquid laudantium magni repellendus. Ipsum dolore minima earum.</p>
+                <img class="customer" src="images/man1.jpg">
+                <h3>john doe</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section begins -->
+
+    <section class="contact" id="contact">
+        <h1 class="title"><span>contact</span> us</h1>
+        <div class="contents">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2373.9256439757633!2d-2.2441536242659406!3d53.48765836414192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1c7b5629105%3A0xb97cf304dc092fdb!2sVictoria%20Station%2C%20Manchester%20M3%201WY%2C%20UK!5e0!3m2!1sen!2sin!4v1698674829023!5m2!1sen!2sin"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- loading lazy means load this iframe only 
+                when it appears on the view port -->
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="input-box">
+                    <span class="fas fa-user"></span>
+                    <input type="text" name="name" placeholder="name">
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-envelope"></span>
+                    <input type="text" name="email" placeholder="email">
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-phone"></span>
+                    <input type="text" name="phone" placeholder="phone">
+                </div>
+
+                <a class="btn">contact now</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer begins -->
+    <footer class="footer">
+        <div class="social-media">
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a>
+            <a href="" class="fab fa-linkedin"></a>
+            <a href="" class="fab fa-pinterest"></a>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <!-- since the address is in id form used # -->
+            <a href="#cakes">cakes</a>
+            <a href="#cheese-cakes">cheesecakes</a>
+            <a href="#new-arrivals">new arrivals</a>
+            <a href="#about">about</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div class="credits">
+            created by <span>Coding with Ann</span> | all rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
